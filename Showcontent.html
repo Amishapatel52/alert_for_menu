@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+    <button id="btn1" onclick="showUl()">Click Me!</button>
+
+    <ul id="demo" style="display: none;">
+        <li><a href="#" onclick="showAlert('Home')">Home</a></li>
+        <li><a href="#" onclick="showAlert('Setting')">Setting</a></li>
+        <li><a href="#" onclick="showAlert('About')">About</a></li>
+        <li><a href="#" onclick="showAlert('Contact')">Contact</a></li>
+        <li><a href="#" onclick="showAlert('Info')">Info</a></li>
+    </ul>
+
+    <script>
+
+        // Show Ul by clicking btn
+        function showUl() {
+            document.getElementById("demo").style.display = "block";
+        }
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("ul").show();
+            });
+        });
+
+        // Show alert with item name when user click
+        function showAlert(itemName) {
+            alert("User clicked " + itemName + "...");
+        }
+    </script>
+</body>
+</html>
